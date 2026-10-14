@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Dataset
+data/raw/
+data/processed/
+
+# Model weights and outputs
+*.pt
+*.onnx
+*.engine
+runs/
+results/
+
+# IDE
+.vscode/
+.idea/
