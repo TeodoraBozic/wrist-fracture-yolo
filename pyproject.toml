@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wrist-fracture-yolo"
+version = "0.1.0"
+description = "Reproducible GRAZPEDWRI-DX wrist fracture detection research"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32,<3", "Pillow>=10.4,<13"]
+
+[project.optional-dependencies]
+eda = [
+    "pandas>=2.2,<4",
+    "numpy>=1.26,<3",
+    "matplotlib>=3.9,<4",
+    "seaborn>=0.13,<0.14",
+    "PyYAML>=6,<7",
+    "nbformat>=5.10,<6",
+    "nbclient>=0.10,<1",
+    "ipykernel>=6.29,<8",
+]
+
+[project.scripts]
+wrist-data = "wrist_fracture.data.figshare:main"
+wrist-inspect = "wrist_fracture.data.inspect_dataset:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

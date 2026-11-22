@@ -1,0 +1,23 @@
+# Planning template only. No training runner consumes this file yet.
+schema_version: 1
+status: planned
+models: [yolo11s.pt, yolo11m.pt, yolo11l.pt]
+dataset:
+  article_id: 14825193
+  version: 2
+  raw_dir: data/raw/grazpedwri-dx
+  yolo_yaml: null  # Define only after inspecting and converting real data.
+  split_manifest: null
+  split_unit: patient
+  train_fractions: [0.25, 0.5, 0.75, 1.0]  # Proposed, not finalized.
+seeds: [42]  # Pilot seed; add independent repetitions for final comparisons.
+training:
+  pretrained: true
+  epochs: null
+  imgsz: null
+  batch: null
+  optimizer: null
+  learning_rate: null
+  device: null
+  deterministic: true
+output_root: results

@@ -18,3 +18,18 @@ results/
 # IDE
 .vscode/
 .idea/
+
+# Packaging, tests, notebooks and local artifacts
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+*.part
+*.pth
+*.ckpt
+*.tflite
+.env.*
+!.env.example
